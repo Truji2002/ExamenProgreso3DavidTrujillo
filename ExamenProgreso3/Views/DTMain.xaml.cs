@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 namespace ExamenProgreso3.Views;
 
 
-
+[QueryProperty("Item", "Item")]
 public partial class DTMain : ContentPage
 {
 	public DTMain()
@@ -31,13 +31,33 @@ public partial class DTMain : ContentPage
         if (response.StatusCode == HttpStatusCode.OK)
         {
             String content = await response.Content.ReadAsStringAsync();
+            
             //Dictionary<string, Post> dictionary = JsonConvert.DeserializeObject<Dictionary<string, Post>>(content);
             //var resultado = JsonConvert.DeserializeObject<Dictionary<string, Post>>(content); 
-            var resultado = JsonConvert.DeserializeObject<List<API>>(content);
-            //var resultado = root.results;
+            var resultado = JsonConvert.DeserializeObject<List<APIDT>>(content);
             ListaDemo.ItemsSource = resultado;
+            
+
+            //var resultado = root.results;
+
 
 
         }
+        
     }
+
+    //private void OnCollectionView_SelectionChangedDT(object sender, SelectionChangedEventArgs e)
+    //{
+    //    APIDT burger = e.CurrentSelection.FirstOrDefault() as APIDT;
+    //    if (burger == null)
+    //    {
+    //        return;
+    //    }
+    //    //Shell.Current.GoToAsync(nameof(APIItemPage), true, new Dictionary<string, object>
+    //    //{
+    //    //{ "Item", burger}
+    //    //});
+    //    App.APIRepoDT.AddNew(resultado)
+    //    ((CollectionView)sender).SelectedItem = null;
+    //}
 }

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ExamenProgreso3.Views.DTMain"
              Title="DTMain">
-    <VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout>
         <Label Text="BlockChain" FontSize="Title" Padding="30,10,30,10"/>
         <!--<SearchBar x:Name="Buscador" 
                    Placeholder="Ingrese el id" 
@@ -19,4 +20,5 @@
             </ListView.ItemTemplate>
         </ListView>
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

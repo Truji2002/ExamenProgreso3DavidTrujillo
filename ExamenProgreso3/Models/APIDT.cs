@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SQLite;
 
 namespace ExamenProgreso3.Models
 {
-    public class API
+    [SQLite.Table("apiDT")]
+    
+
+    public class APIDT
     {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public string symbol { get; set; }
         public double price_24h { get; set; }
         public double volume_24h { get; set; }

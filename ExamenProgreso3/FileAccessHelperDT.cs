@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ExamenProgreso3
 {
-    internal class FileAccessHelperDT
+    public class FileAccessHelperDT
     {
+        public static string GetLocalFilePath(string filename)
+        {
+            return System.IO.Path.Combine(FileSystem.AppDataDirectory, filename);
+        }
     }
 }
