@@ -13,7 +13,7 @@ public partial class DTMain : ContentPage
 		InitializeComponent();
 	}
 
-    public async Task Button_ClickedAsync(object sender, EventArgs e)
+    public async Task Button_ClickedDTAsync(object sender, EventArgs e)
     {
         //string cadena = Buscador.Text;
         var request = new HttpRequestMessage();

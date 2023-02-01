@@ -4,9 +4,19 @@
              x:Class="ExamenProgreso3.Views.DTMain"
              Title="DTMain">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label Text="BlockChain" FontSize="Title" Padding="30,10,30,10"/>
+        <!--<SearchBar x:Name="Buscador" 
+                   Placeholder="Ingrese el id" 
+                   TextColor="Black"/>-->
+
+        <Button Text="Llamar API" Clicked="Button_ClickedDT" />
+
+        <ListView x:Name="ListaDemo">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding symbol}" Detail="{Binding price_24h}"  />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </VerticalStackLayout>
 </ContentPage>

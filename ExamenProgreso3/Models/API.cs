@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ExamenProgreso3.Models
 {
-    internal class API
+    public class API
     {
+        public string symbol { get; set; }
+        public double price_24h { get; set; }
+        public double volume_24h { get; set; }
+        public double last_trade_price { get; set; }
     }
 }
